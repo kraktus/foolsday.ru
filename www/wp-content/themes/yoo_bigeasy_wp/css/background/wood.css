@@ -1,0 +1,13 @@
+/* Copyright (C) YOOtheme GmbH, YOOtheme Proprietary Use License (http://www.yootheme.com/license) */
+
+
+body#page { background: #3f3d3d url(../../images/background/wood_bg.jpg) repeat; }
+
+@media only screen and (min-device-width: 769px) {
+	
+	#page-body { 
+		background: url(../../images/background/wood_img.svg) 50% 0 no-repeat fixed;
+		background-size: 100% 1500px;
+	}
+	
+}

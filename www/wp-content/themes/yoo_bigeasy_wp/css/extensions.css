@@ -1,0 +1,82 @@
+/* Copyright (C) YOOtheme GmbH, YOOtheme Proprietary Use License (http://www.yootheme.com/license) */
+
+/* Gallery
+----------------------------------------------------------------------------------------------------*/
+
+.wk-gallery-showcase .slides-container:hover .next,
+.wk-gallery-showcase .slides-container:hover .prev {
+	width: 45px;
+	height: 45px;
+	margin-top: -25px;
+}
+
+.wk-gallery-showcase .slides-container:hover .prev { background-position: 0 -100px; }
+.wk-gallery-showcase .slides-container:hover .next:hover { background-position: 0 -50px; }
+.wk-gallery-showcase .slides-container:hover .prev:hover { background-position: 0 -150px; }
+
+.wk-gallery-showcase .wk-slideshow .caption,
+.wk-gallery-showcase .wk-slideshow .caption a {	background: none; }
+.wk-ie .wk-slideshow .caption { filter: none; }
+
+.wk-gallery-showcase .wk-slideshow .caption h1 {
+	float: left;
+	margin: 0 0 0 -10px;
+	padding: 0 20px;
+	color: #000;
+	line-height: 60px;
+	background: #fff;
+}
+
+.wk-gallery-showcase .wk-slideshow .caption h1 + span {
+	display: block;
+	float: left;
+	margin-left: -10px;
+	padding: 0 20px;
+	font-size: 16px;
+	line-height: 45px;
+	background: #000;
+	clear: both;
+}
+
+.wk-gallery-showcase .wk-slideset .set > li { margin-left: 5px; margin-right: 5px; }
+
+.wk-gallery-showcase .wk-slideset .set > li:after {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	content: "";
+	display: block;
+}
+
+.wk-gallery-showcase div.sets { 
+	margin-left: -5px;
+	margin-right: -5px;
+	line-height: 0;
+}
+
+.wk-gallery-showcase .wk-slideset .set > li:hover { outline: none; }
+.wk-gallery-showcase .wk-slideset .set > li.active { outline: none; }
+
+.wk-gallery-showcase .wk-slideset > div .next,
+.wk-gallery-showcase .wk-slideset > div .prev {
+	height: 35px;
+	width: 35px;
+}
+
+.wk-gallery-showcase .wk-slideset > div .prev { background-position: 0 -100px; }
+.wk-gallery-showcase .wk-slideset > div .next:hover { background-position: 0 -50px; }
+.wk-gallery-showcase .wk-slideset > div .prev:hover { background-position: 0 -150px; }
+
+/* Spotlight
+----------------------------------------------------------------------------------------------------*/
+
+.spotlight .overlay-default, 
+.wk-ie .spotlight .overlay-default { background-image: url(../images/widgetkit/spotlight/default_hover.png); }
+
+
+/* Lightbox
+----------------------------------------------------------------------------------------------------*/
+
+#lightbox-close { background-image: url(../images/widgetkit/lightbox/close.png); }

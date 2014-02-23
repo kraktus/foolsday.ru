@@ -1,0 +1,15 @@
+/* Copyright (C) YOOtheme GmbH, YOOtheme Proprietary Use License (http://www.yootheme.com/license) */
+
+body#page { background: #234141 }
+
+@media only screen and (min-device-width: 769px) {
+	
+	body#page { 
+		background-image: url(../../images/background/gradient_turquoise.svg);
+		background-position: 50% 0;
+		background-attachment: fixed;
+		background-repeat: no-repeat;
+		background-size: 100% 1500px;
+	}
+
+}

@@ -1,0 +1,21 @@
+/* Copyright (C) YOOtheme GmbH, YOOtheme Proprietary Use License (http://www.yootheme.com/license) */
+
+body,
+.menu-dropdown li.level3,
+#searchbox input
+ { 
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-style: italic;
+}
+
+.breadcrumbs,
+.menu-dropdown,
+.menu-sidebar li.level1 > a,
+.menu-sidebar li.level1 > span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+#searchbox .results li.results-header { font-style: normal; }

@@ -1,0 +1,189 @@
+/* Copyright (C) YOOtheme GmbH, YOOtheme Proprietary Use License (http://www.yootheme.com/license) */
+
+@import url(../warp/css/menus.css);
+
+
+/* Mega Drop-Down Menu
+----------------------------------------------------------------------------------------------------*/
+
+/* Level 1 */
+.menu-dropdown { margin-bottom: -7px; }
+
+.menu-dropdown li.level1 { padding-bottom: 7px; }
+
+.menu-dropdown a.level1,
+.menu-dropdown span.level1 {
+	color: #444;
+	background: url(../images/menu_dropdown_level1.png) 0 50% no-repeat;
+}
+
+.menu-dropdown:first-child .level1:first-child .level1 { background: none; }
+
+.menu-dropdown a.level1 > span,
+.menu-dropdown span.level1 > span {
+	height: 30px;
+	padding-left: 13px;
+	padding-right: 12px;
+	font-size: 18px;
+	line-height: 30px;
+	text-transform: uppercase;
+}
+
+/* Set Active */
+.menu-dropdown li.active .level1 { color: #ccc; }
+
+/* Drop-Down */
+.menu-dropdown .dropdown { 
+	top: 37px;
+	left: -5px;
+}
+
+.menu-dropdown .dropdown-bg { margin: 0 5px 5px 5px; }
+
+.menu-dropdown .dropdown-bg > div {
+	padding: 0 5px 5px 4px;
+	background: #1A1A1C;
+	box-shadow: 0 0 2px rgba(0,0,0,0.7);
+}
+
+.menu-dropdown .module {
+	margin: 0;
+	padding: 5px 10px 10px 10px;
+	background: #000;
+}
+
+/* Level 2 */
+.menu-dropdown li.level2 { 
+	margin-left: 1px;
+	padding: 0 10px;
+	border-top: 1px solid #1A1A1C;
+	background: #000; 
+}
+.menu-dropdown li.level2:first-child { border: none; }
+
+.menu-dropdown a.level2,
+.menu-dropdown span.level2 { color: #444; }
+
+.menu-dropdown li.level2 .parent { background: url(../images/menu_dropdown_level2_parent.png) 0 100% repeat-x; }
+
+.menu-dropdown a.level2 > span,
+.menu-dropdown span.level2 > span {
+	font-size: 24px;
+	line-height: 24px;
+	text-transform: uppercase;
+}
+
+/* Set Current */
+.menu-dropdown a.current.level2 { color: #CCC; } 
+
+/* Level 3 */
+.menu-dropdown li.level3 { font-size: 12px; }
+
+.menu-dropdown a.level3 { color: #888; }
+
+/* Set Current */
+.menu-dropdown a.current.level3 { font-weight: bold; } 
+
+/* Icons */
+.menu-dropdown .level1 .level1 span.icon {
+	width: 30px;
+	height: 30px;
+	margin-left: -5px;
+}
+.menu-dropdown .level1 .level1 span.icon + span,
+.menu-dropdown .level1 .level1 span.icon + span + span { margin-left: 25px; }
+
+.menu-dropdown li.level2 .level2 span.icon { margin-right: 4px; }
+
+.menu-dropdown li.level2 .level2 span.icon + span,
+.menu-dropdown li.level2 .level2 span.icon + span + span { margin-left: 39px; }
+
+/* Subtitles */
+.menu-dropdown .level1 .level1 span.title { 
+	font-size: 16px;
+	line-height: 20px;
+}
+.menu-dropdown .level1 .level1 span.subtitle { 
+	margin-top: -2px;
+	font-family: Arial, Helvetica, sans-serif;
+	text-transform: none;
+}
+
+.menu-dropdown .level2 .level2 span.subtitle { 
+	margin-top: 2px;
+	margin-bottom: 2px;
+	font-size: 15px;
+	line-height: 15px;
+	text-transform: none;
+}
+
+/* Sidebar/Accordion Menu
+----------------------------------------------------------------------------------------------------*/
+
+.module ul.menu-sidebar { margin: -10px; }
+
+h3.module-title + ul.menu-sidebar { margin-top: 0; }
+
+/* Link */
+.menu-sidebar a,
+.menu-sidebar li > span { color: #444; }
+
+/* Current */
+#page .menu-sidebar a.current { color: #ccc; }
+
+.menu-sidebar li.level1 > a:hover,
+.menu-sidebar li.level1 > span:hover { color: #000; }
+
+.menu-sidebar a.level1 > span,
+.menu-sidebar span.level1 > span {
+	padding: 10px;
+	font-size: 24px;
+	text-transform: uppercase;
+}
+
+.menu-sidebar li.parent .level1 > span { 
+	padding-right: 30px;
+	background: url(../images/menu_sidebar_parent.png) 100% 0 no-repeat;
+}
+.menu-sidebar li.parent .level1 > span:hover { background-position: 100% -100px; }
+.menu-sidebar li.parent.active .level1 > span { background-position: 100% -200px; }
+.menu-sidebar li.parent.active .level1 > span:hover { background-position: 100% -300px; }
+
+/* Level 2-4 */
+.menu-sidebar li.level1 > div,
+.menu-sidebar li.level1 > ul { 
+	padding: 10px;
+	background: url(../images/menu_sidebar_parent_line.png) 0 0 repeat-x;
+}
+
+.menu-sidebar .level2 a > span { 
+	color: #888;
+	font-size: 12px;
+}
+
+.menu-sidebar .level2 a.current > span { color: #ccc; }
+
+.menu-sidebar ul.level2 ul { padding-left: 10px; }
+
+/* Icons */
+.menu-sidebar span.icon { margin-right: 4px; }
+
+
+/* Line Menu
+----------------------------------------------------------------------------------------------------*/
+
+.menu-line li {
+	margin-left: 5px;
+	padding-left: 15px;
+	background: url(../images/menu_line_item.png) 0 50% no-repeat;
+}
+
+.menu-line li:first-child {
+	margin-left: 0;
+	padding-left: 0;
+	background: none;
+}
+
+.menu-line li a { color: #CCC; }
+
+#footer .menu-line { margin-bottom: 10px; }
