@@ -116,12 +116,12 @@ table.zebra .center { text-align: center; }
 
 table.zebra td * { vertical-align: middle; }
 
-table.zebra tfoot { font-style: italic; }
+table.zebra tfoot { /* font-style: italic; */ }
 
 table.zebra caption {
 	font-size: 11px;
 	text-align: left;
-	font-style: italic;
+	/* font-style: italic; */
 }
 
 
@@ -133,7 +133,7 @@ dl.separator {
 	overflow: hidden;
 }
 
-dl.separator dt {	
+dl.separator dt {
 	width: 160px;
 	padding-right: 10px;
 	float: left;
@@ -150,7 +150,7 @@ dl.separator dd {
 ----------------------------------------------------------------------------------------------------*/
 
 /* Inline Text Box */
-em.box { 
+em.box {
 	padding: 0 3px;
 	white-space: nowrap;
 }

@@ -1,12 +1,12 @@
 /* Copyright (C) YOOtheme GmbH, YOOtheme Proprietary Use License (http://www.yootheme.com/license) */
-
+@import url(http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&subset=cyrillic-ext,latin,latin-ext,cyrillic);
 h1,
 h2,
 h3,
 h4,
 h5,
 h6,
-#searchbox .results li.results-header { font-family: "Yanone Kaffeesatz"; }
+#searchbox .results li.results-header { font-family: 'PT Sans Narrow', sans-serif; }
 
 .module .module-title,
 h1 { font-size: 40px; }
