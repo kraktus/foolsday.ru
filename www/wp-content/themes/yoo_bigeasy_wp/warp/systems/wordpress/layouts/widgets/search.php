@@ -1,4 +1,4 @@
-<?php 
+<?php
 /**
 * @package   Warp Theme Framework
 * @author    YOOtheme http://www.yootheme.com
@@ -13,9 +13,9 @@ if ($module->position != 'search') {
 
 // ajax search
 if ($module->position == 'search') : ?>
-		
+
 <form id="searchbox" action="<?php echo home_url( '/' ); ?>" method="get" role="search">
-	<input type="text" value="" name="s" placeholder="<?php _e('search...', 'warp'); ?>" />
+	<input type="text" value="" name="s" placeholder="<?php _e('Поиск...', 'warp'); ?>" />
 	<button type="reset" value="Reset"></button>
 </form>
 
