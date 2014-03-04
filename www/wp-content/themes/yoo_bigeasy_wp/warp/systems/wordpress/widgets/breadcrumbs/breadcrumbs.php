@@ -55,6 +55,9 @@ class Warp_Breadcrumbs extends WP_Widget {
 			//Раздел музыка
 			if (strstr($_SERVER['REQUEST_URI'],'albums'))
 				$output .= '<span><strong>Музыка</strong></span>';
+			//Раздел поиска
+			if (strstr($_SERVER['REQUEST_URI'],'search'))
+				$output .= '<span><strong>Поиск по запросу</strong></span>';
 			//Раздел события
 			if ($_SERVER['REQUEST_URI'] == '/events/') {
 				$output .= '<strong>События</strong>';
