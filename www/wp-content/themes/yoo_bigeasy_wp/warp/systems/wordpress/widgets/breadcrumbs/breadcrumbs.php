@@ -10,32 +10,32 @@ class Warp_Breadcrumbs extends WP_Widget {
 
 	function Warp_Breadcrumbs() {
 		$widget_ops = array('description' => 'Display your sites breadcrumb navigation');
-		parent::WP_Widget(false, 'Warp - Breadcrumbs', $widget_ops);      
+		parent::WP_Widget(false, 'Warp - Breadcrumbs', $widget_ops);
 	}
 
-	function widget($args, $instance) {  
-		
+	function widget($args, $instance) {
+
 		global $wp_query;
-		
+
 		extract($args);
 
 		$title = $instance['title'];
 		$home_title = trim($instance['home_title']);
-		
+
 		if (empty($home_title)) {
-			$home_title = 'Home';
+			$home_title = 'Главная';
 		}
-		
+
 		echo $before_widget;
 
 		if ($title) {
 			echo $before_title . $title . $after_title;
 		}
-		
+
 		if (!is_home() && !is_front_page()) {
-			
+
 			$output = '<div class="breadcrumbs">';
-			
+
 			$output .= '<a href="'.get_option('home').'">';
 			$output .= $home_title;
 			$output .= '</a>';
@@ -52,14 +52,43 @@ class Warp_Breadcrumbs extends WP_Widget {
 				}
 			}
 
+			//Раздел музыка
+			if (strstr($_SERVER['REQUEST_URI'],'albums'))
+				$output .= '<span><strong>Музыка</strong></span>';
+			//Раздел события
+			if ($_SERVER['REQUEST_URI'] == '/events/') {
+				$output .= '<strong>События</strong>';
+				$output .= '</div>';
+				echo $output;
+				echo $after_widget;
+				return 0;
+			}
+			//Раздел медиа
+			if ($_SERVER['REQUEST_URI'] == '/media/') {
+				$output .= '<strong>Медиа</strong>';
+				$output .= '</div>';
+				echo $output;
+				echo $after_widget;
+				return 0;
+			}
+
+			//Раздел события - персональная страница события.
+			if (strstr($_SERVER['REQUEST_URI'],'events'))
+				$output .= '<a href="/events/"><span><strong>События</strong></span></a>';
+
+			//Раздел медиа - персональная страница медиа-отчета.
+			if (strstr($_SERVER['REQUEST_URI'],'media'))
+				$output .= '<a href="/events/"><span><strong>Медиа</strong></span></a>';
+
+
 			if (is_category()) {
-				
+
 				$cat_obj = $wp_query->get_queried_object();
-				
+
 				$cats = explode("@@@", get_category_parents($cat_obj->term_id, TRUE, '@@@'));
-				
+
 				unset($cats[count($cats)-1]);
-				
+
 				$cats[count($cats)-1] = '<strong>'.strip_tags($cats[count($cats)-1]).'</strong>';
 				$output .= implode("", $cats);
 			} elseif (is_tag()) {
@@ -67,10 +96,10 @@ class Warp_Breadcrumbs extends WP_Widget {
 			} elseif (is_date()) {
 				$output .= '<strong>'.single_month_title(' ',false).'</strong>';
 			} elseif (is_author()) {
-				
+
 
 				$user = !empty($wp_query->query_vars['author_name']) ? get_userdatabylogin($wp_query->query_vars['author']) : get_user_by("id", ((int) $_GET['author']));
-				
+
 				$output .= '<strong>'.$user->display_name.'</strong>';
 			} elseif (is_search()) {
 				$output .= '<strong>'.stripslashes(strip_tags(get_search_query())).'</strong>';
@@ -83,28 +112,28 @@ class Warp_Breadcrumbs extends WP_Widget {
 			}
 
 			$output .= '</div>';
-			
+
 		} else {
-			
+
 			$output = '<div class="breadcrumbs">';
-			
+
 			$output .= '<strong>'.$home_title.'</strong>';
-			
+
 			$output .= '</div>';
 
 		}
-		
+
 		echo $output;
 
 		echo $after_widget;
 
 	}
 
-	function update($new_instance, $old_instance) {                
+	function update($new_instance, $old_instance) {
 		return $new_instance;
 	}
 
-	function form($instance) {        
+	function form($instance) {
 		$title = esc_attr($instance['title']);
 		$home_title = esc_attr($instance['home_title']);
 		?>
@@ -119,6 +148,6 @@ class Warp_Breadcrumbs extends WP_Widget {
 <?php
 	}
 
-} 
+}
 
 register_widget('Warp_Breadcrumbs');
