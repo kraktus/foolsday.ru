@@ -22,7 +22,7 @@ if ($module->position == 'search') : ?>
 <script src="<?php echo $this['path']->url('js:search.js'); ?>"></script>
 <script>
 jQuery(function($) {
-	$('#searchbox input[name=s]').search({'url': '<?php echo site_url('wp-admin'); ?>/admin-ajax.php?action=warp_search', 'param': 's', 'msgResultsHeader': '<?php _e("Search Results", "warp"); ?>', 'msgMoreResults': '<?php _e("More Results", "warp"); ?>', 'msgNoResults': '<?php _e("No results found", "warp"); ?>'}).placeholder();
+	$('#searchbox input[name=s]').search({'url': '<?php echo site_url('wp-admin'); ?>/admin-ajax.php?action=warp_search', 'param': 's', 'msgResultsHeader': '<?php _e("Поиск информации", "warp"); ?>', 'msgMoreResults': '<?php _e("Больше результатов...", "warp"); ?>', 'msgNoResults': '<?php _e("Информации нет", "warp"); ?>'}).placeholder();
 });
 </script>
 <?php endif; ?>
