@@ -49,7 +49,7 @@ else
 <th style="vertical-align:text-top;">
 <br>
 
-<img class="alignnone size-medium wp-image-721" style="border: 5px solid #3FA5C3;" alt="10" src="<?=$post_info["wpcf-afisha"][0];?>" width="219" height="300" />
+<img class="alignnone size-medium wp-image-721" style="border: 5px solid #3FA5C3;" alt="10" src="<?=$post_info["wpcf-afisha"][0];?>" width="228" height="300" />
 </th>
 <td style="width: 4%;"></td>
 <th class="center" style="text-align: left;" align="right">

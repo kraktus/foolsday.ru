@@ -11,6 +11,9 @@ $post_info = get_post_custom();
 // var_dump($post_info);
 // echo "</pre>";
 /*ВНИМАНИЕ МНОГО ГОВНОКОДА - Я НЕ УСПЕВАЛ :(*/?>
+<? define(PAPER_NUMBER, 2); //Кол-во доступных газет для hover слоя превью события
+?>
+
 <?if($post_info["wpcf-city"][0] == 1)//Если город выбран правильно, то это Мск
         $post_info["wpcf-city"][0] = 'Москва';
 else
@@ -22,13 +25,6 @@ else
 
 		<h1 class="title"><a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
 
-		<!-- <p class="meta">
-                        <?php
-                                $date = '<time datetime="'.get_the_date('Y-m-d').'" pubdate>'.get_the_date().'</time>';
-                                printf(__('Written by %s on %s. Posted in %s', 'warp'), '<a href="'.get_author_posts_url(get_the_author_meta('ID')).'" title="'.get_the_author().'">'.get_the_author().'</a>', $date, get_the_category_list(', '));
-                        ?>
-                </p> -->
-
 	</header>
 
         &nbsp;
@@ -36,15 +32,30 @@ else
 <thead>
 <tr>
 
+
+
+<th>
+    <a data-spotlight="effect:left;" href="<?php the_permalink() ?>" class="spotlight" style="position: relative; overflow: hidden;">
+        <img src="<?=$post_info["wpcf-afisha"][0];?>" style="border: 5px solid  #3FA5C3;"  width="228" height="300" alt="Spotlight Image">
+        <div class="overlay hover_paper<?=rand(1, PAPER_NUMBER)?>" style="position: absolute; visibility: visible; display: block; width: 228px; height: 300px; left: -228px; top: 0px; bottom: 0px;"></div>
+    </a>
+</th>
+
+<!--
 <th><a data-spotlight="effect:right;" href="<?php the_permalink() ?>" class="spotlight" style="position: relative; overflow: hidden;">
-                <img style="border: 5px solid #3FA5C3;"src="<?=$post_info["wpcf-afisha"][0];?>" width="219" height="300" alt="Spotlight Image">
-                <div class="overlay" style="position: absolute; visibility: visible; display: block; width: 219px; height: 300px; right: -219px; top: 0px; bottom: 0px;"><divПерейти к событию></div></div>
+                <img style="border: 5px solid #3FA5C3;"src="<?=$post_info["wpcf-afisha"][0];?>" width="228" height="300" alt="Spotlight Image">
+                <div class="overlay hover_paper<?=rand(1, PAPER_NUMBER)?>" style="position: absolute; visibility: visible; display: block; width: 228px; height: 300px; right: -219px; top: 0px; bottom: 0px;"><divПерейти к событию></div></div>
 </a></th>
+
+ -->
+
+
+
 
 
 <td style="width: 15%;"></td>
 <th class="center" style="text-align: left;" align="right" valign="top">
-<h3 style="text-align: right;"><strong><?=date( 'd F Y', $post_info["wpcf-date"][0]);?></strong></h3>
+<h3 style="text-align: right;"><strong><?=rdate( 'd F Y', $post_info["wpcf-date"][0], 1);?></strong></h3>
 <h3 style="text-align: right;"><strong>  <?=date("H:i", $post_info["wpcf-date"][0]);?></strong></h3>
 <h3 style="text-align: right;">г. <?=$post_info["wpcf-city"][0];?></h3>
 <h3 style="text-align: right;">Клуб <strong><?=$post_info["wpcf-club"][0];?></strong></h3>

@@ -22,10 +22,16 @@ a { color: #3FA5C3; }
 .menu-dropdown a.level2:hover,
 .menu-dropdown a.level3:hover,
 .menu-sidebar .level2 a:hover > span,
-.menu-line li a:hover { color: #3FA5C3; }
+.menu-line li a:hover { color: #3FA5C3;    -webkit-transition: all 0.2s ease;
+-o-transition: all 0.2s ease;
+-moz-transition: all 0.2s ease;
+transition: all 0.2s ease;}
 
 .menu-sidebar li.level1 > a:hover,
-.menu-sidebar li.level1 > span:hover { background: #3FA5C3; }
+.menu-sidebar li.level1 > span:hover { background: #3FA5C3;    -webkit-transition: all 0.2s ease;
+-o-transition: all 0.2s ease;
+-moz-transition: all 0.2s ease;
+transition: all 0.2s ease;}
 
 
 /* Modules
@@ -42,7 +48,7 @@ a { color: #3FA5C3; }
 .mod-color table.zebra tbody tr.odd { background: #3C9DB9; }
 .mod-color ul.zebra > li:nth-of-type(odd),
 .mod-color table.zebra tbody tr:nth-of-type(odd) { background: #3C9DB9; }
-.mod-color em.box {	background: #3C9DB9; }
+.mod-color em.box {     background: #3C9DB9; }
 
 /* Tools
 ----------------------------------------------------------------------------------------------------*/
@@ -84,8 +90,44 @@ ul.check > li { background-image: url(../images/tools/list_check.png); }
 .wk-gallery-showcase .wk-slideset .set > li.active:after { border: 5px solid #3FA5C3; }
 
 .wk-gallery-showcase .wk-slideset > div .next,
-.wk-gallery-showcase .wk-slideset > div .prev {	background-image: url(../images/widgetkit/gallery/navigation_buttons.png); }
+.wk-gallery-showcase .wk-slideset > div .prev { background-image: url(../images/widgetkit/gallery/navigation_buttons.png); }
 
 .spotlight .overlay { background: url(../images/widgetkit/spotlight/hover.png); }
+.album_preview { background: url(../images/widgetkit/spotlight/hover_vynil.png)!important; }
+.hover_frp_song { background: url(../images/widgetkit/spotlight/hover_frp_song.png)!important; }
+.hover_paper1 { background: url(../images/widgetkit/spotlight/paper1.png)!important; }
+.hover_paper2 { background: url(../images/widgetkit/spotlight/paper2.png)!important; }
 
-.spotlight .overlay-default	{ background-color: rgba(63,165,195,0.5); }
+.spotlight .overlay-default     { background-color: rgba(63,165,195,0.5); }
+
+
+.createdby{
+        opacity: .5;
+
+}
+
+.createdby a:hover{
+
+  opacity: 1;
+   -webkit-transition: all 0.2s ease;
+-o-transition: all 0.2s ease;
+-moz-transition: all 0.2s ease;
+transition: all 0.2s ease;
+
+}
+
+
+
+.social_new a{
+   opacity: .7;
+   -webkit-transition: all 0.2s ease;
+-o-transition: all 0.2s ease;
+-moz-transition: all 0.2s ease;
+transition: all 0.2s ease;
+
+
+}
+.social_new a:hover{
+
+   opacity: 1;
+}

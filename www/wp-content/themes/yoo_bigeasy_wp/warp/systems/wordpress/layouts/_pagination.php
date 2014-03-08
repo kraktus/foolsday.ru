@@ -31,14 +31,14 @@ if (!isset($page) && !isset($pages)) {
 		$page = get_query_var('cpage');
 		$comments_per_page = get_option('comments_per_page');
 		$pages = intval(ceil($comments / $comments_per_page));
-	}	
+	}
 
 	$page = !empty($page) ? intval($page) : 1;
 }
 
 $output = array();
 
-if ($pages > 1) {	
+if ($pages > 1) {
 	$output[] = '<div class="pagination">';
 
 	$range_start = max($page - $range, 1);
@@ -46,7 +46,7 @@ if ($pages > 1) {
 
 	if ($page > 1) {
 		$link     = ($type === 'posts') ? get_pagenum_link(1) : get_comments_pagenum_link(1);
-		$output[] = '<a class="first" href="'.$link.'">'.__('First', 'warp').'</a>';
+		$output[] = '<a class="first" href="'.$link.'">'./*__('First', 'warp').*/'</a>';
 
 		$link     = ($type === 'posts') ? get_pagenum_link($page-1) : get_comments_pagenum_link($page-1);
 		$output[] = '<a class="previous" href="'.$link.'">«</a>';
@@ -58,16 +58,16 @@ if ($pages > 1) {
 		} else {
 			$link  = ($type === 'posts') ? get_pagenum_link($i) : get_comments_pagenum_link($i);
 			$output[] = '<a href="'.$link.'">'.$i.'</a>';
-		} 
+		}
 	}
 
 	if ($page < $pages) {
 		$link     = ($type === 'posts') ? get_pagenum_link($page+1) : get_comments_pagenum_link($page+1);
-		$output[] = '<a class="next" href="'.$link.'">»</a>';    
+		$output[] = '<a class="next" href="'.$link.'">»</a>';
 
 		$link     = ($type === 'posts') ? get_pagenum_link($pages) : get_comments_pagenum_link($pages);
-		$output[] = '<a class="last" href="'.$link.'">'.__('Last', 'warp').'</a>';
-	} 
+		$output[] = '<a class="last" href="'.$link.'">'./*__('Last', 'warp').*/'</a>';
+	}
 
 	$output[] = '</div>';
 

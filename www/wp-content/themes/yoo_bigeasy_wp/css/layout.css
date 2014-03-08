@@ -10,12 +10,20 @@
 #content,
 #footer { margin: 5px; }
 
-#header { 
+#header {
 	margin: 0 5px 5px 5px;
 	padding: 10px;
 }
 
-#logo { margin-right: 20px; }
+#logo { margin-right: 20px;
+	-webkit-transition: all 0.2s ease;
+	-o-transition: all 0.2s ease;
+	-moz-transition: all 0.2s ease;
+	transition: all 0.2s ease;
+	opacity: .7;
+}
+#logo:hover{ margin-right: 20px;
+opacity: 1;}
 
 #toolbar,
 #headerbar { margin-bottom: 45px; }
@@ -45,7 +53,7 @@
 
 #header { background: #1A1A1C; }
 
-#menubar { 
+#menubar {
 	position: absolute;
 	right: 7px;
 	bottom: 7px;
@@ -69,9 +77,9 @@
 	background: #FAFAFA;
 }
 
-#footer { 
+#footer {
 	text-align: left;
-	background: url(../images/module_transparent.png); 
+	background: url(../images/module_transparent.png);
 }
 
 #totop-scroller {
@@ -88,3 +96,5 @@
 }
 
 #totop-scroller:hover { background-position: 0 -50px; }
+
+
