@@ -81,7 +81,7 @@ class Warp_Breadcrumbs extends WP_Widget {
 
 			//Раздел медиа - персональная страница медиа-отчета.
 			if (strstr($_SERVER['REQUEST_URI'],'media'))
-				$output .= '<a href="/events/"><span><strong>Медиа</strong></span></a>';
+				$output .= '<a href="/media/"><span><strong>Медиа</strong></span></a>';
 
 
 			if (is_category()) {

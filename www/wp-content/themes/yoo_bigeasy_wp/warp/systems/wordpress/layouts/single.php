@@ -15,13 +15,6 @@
 
 				<h1 class="title"><?php the_title(); ?></h1>
 
-				<!-- <p class="meta">
-					<?php
-						$date = '<time datetime="'.get_the_date('Y-m-d').'" pubdate>'.get_the_date().'</time>';
-						printf(__('Written by %s on %s. Posted in %s', 'warp'), '<a href="'.get_author_posts_url(get_the_author_meta('ID')).'" title="'.get_the_author().'">'.get_the_author().'</a>', $date, get_the_category_list(', '));
-					?>
-				</p> -->
-
 			</header>
 
 
@@ -49,14 +42,14 @@ else
 <th style="vertical-align:text-top;">
 <br>
 
-<img class="alignnone size-medium wp-image-721" style="border: 5px solid #3FA5C3;" alt="10" src="<?=$post_info["wpcf-afisha"][0];?>" width="228" height="300" />
+<img class="alignnone size-medium wp-image-721" style="border: 1px solid #1A1A1C;" alt="10" src="<?=$post_info["wpcf-afisha"][0];?>" width="228" height="300" />
 </th>
 <td style="width: 4%;"></td>
 <th class="center" style="text-align: left;" align="right">
 	<h4>
 	<dl class="separator">
 		<dt>Когда?</dt>
-			<dd><strong><?=date( 'd F Y', $post_info["wpcf-date"][0]);?></strong></dd>
+			<dd><strong><?=rdate( 'd F Y', $post_info["wpcf-date"][0], 1);?></strong></dd>
 			<dd>Начало в <strong><?=date("H:i", $post_info["wpcf-date"][0]);?></strong></dd>
 			<dd><br></dd>
 		<dt>Где?</dt>
@@ -141,25 +134,10 @@ else
 
 	<?php if (have_posts()) : ?>
 		<?php while (have_posts()) : the_post(); ?>
-
 		<article class="item" data-permalink="<?php the_permalink(); ?>">
-
 			<header>
-
 				<h1 class="title"><?php the_title(); ?></h1>
-
-				<!-- <p class="meta">
-					<?php
-						$date = '<time datetime="'.get_the_date('Y-m-d').'" pubdate>'.get_the_date().'</time>';
-						printf(__('Written by %s on %s. Posted in %s', 'warp'), '<a href="'.get_author_posts_url(get_the_author_meta('ID')).'" title="'.get_the_author().'">'.get_the_author().'</a>', $date, get_the_category_list(', '));
-					?>
-				</p> -->
-
 			</header>
-
-
-
-
 <?
 $post_info = get_post_custom();
 
@@ -167,12 +145,6 @@ $post_info = get_post_custom();
 // var_dump($post_info);
 // echo "</pre>";
 /*ВНИМАНИЕ МНОГО ГОВНОКОДА - Я НЕ УСПЕВАЛ :(*/?>
-
-<!--
-<?php if (get_the_author_meta('description')) : ?>
-<?php endif; ?>
- -->
-
 
 <!-- Заголовок -->
 <table border="0" cellpadding="0" cellspacing="0" style="width: 600px;">
@@ -185,13 +157,13 @@ $post_info = get_post_custom();
 				<? endif;?>
 			</td>
 			<td style="text-align: right; vertical-align: top">
-				<h4>
+				<!-- <h4>
 					<strong>
 					<?=the_time('j F Y');?>
 					<br><br>
 					<?=get_the_time();?>
 					</strong>
-				</h4>
+				</h4> -->
 			</td>
 		</tr>
 		<tr>
@@ -200,14 +172,14 @@ $post_info = get_post_custom();
 		</tr>
 	</tbody>
 </table>
-
+<br><br>
 <!-- Если только фотки -->
 <? if(($post_info["wpcf-isset_photo"][0] == 1) && ($post_info["wpcf-isset_video"][0] != 1)):?>
 	<div class="wk-gallery wk-gallery-wall clearfix polaroid ">
 		<? for ($i = 0; $i < count($post_info["wpcf-photos"]); $i++): ?>
 			<a class="" href="<?=$post_info["wpcf-photos"][$i]?>" data-lightbox="group:506-5314969e78b60" title="">
 			<div>
-				<img src="<?=$post_info["wpcf-photos"][$i]?>" width="200" height="150" alt="image1">
+				<img src="<?=$post_info["wpcf-photos"][$i]?>" width="213" height="142" alt="image1">
 				<!-- <p class="title">Tony</p> -->
 			</div>
 			</a>
@@ -238,7 +210,7 @@ $post_info = get_post_custom();
 	<div class="wk-gallery wk-gallery-wall clearfix zoom ">
 		<? for ($i = 0; $i < count($post_info["wpcf-photos"]); $i++): ?>
 			<a class="" href="<?=$post_info["wpcf-photos"][$i]?>" data-lightbox="group:504-5314969e7657e" title="">
-				<img src="<?=$post_info["wpcf-photos"][$i]?>" width="200" height="150" alt="image4">
+				<img src="<?=$post_info["wpcf-photos"][$i]?>" width="213" height="150" alt="image4">
 			</a>
 		<? endfor; ?>
 	</div>
@@ -261,18 +233,14 @@ $post_info = get_post_custom();
 </div> -->
 
 
-<a style="display: block;" data-lightbox  href="http://www.youtube.com/watch?v=O6RCrsATYw0" title="Изо Всех Сил">
-
-
-<img alt="Demo Image" height="140" width="200" src="wp-content/uploads/media/tube.jpg"/>
-</a>
-
+<!-- <a style="display: block;" data-lightbox  href="http://www.youtube.com/watch?v=O6RCrsATYw0" title="Изо Всех Сил">
+ -->
 
 <!-- Видосы -->
 <? if($post_info["wpcf-isset_video"][0] == 1):?>
 	<? for ($i = 0; $i < count($post_info["wpcf-video"]); $i++): ?>
 		<br><br>
-		<video src="<?=$post_info["wpcf-video"][$i]?>" width="600" height="400"></video>
+		<?=$post_info["wpcf-video"][$i]?>
 	<? endfor; ?>
 <? endif;?>
 
