@@ -163,5 +163,21 @@ if ($current_user_role!='Administrator')
 }
 
 
+
+// /* редирект с login на /wp-login.php  и с admin на /wp-admin */
+// add_action('template_redirect', 'kama_login_redirect');
+// function kama_login_redirect(){
+//       if( strpos($_SERVER['REQUEST_URI'], 'login')!==false )
+//       $loc = '/wp-login.php';
+//       elseif( strpos($_SERVER['REQUEST_URI'], 'admin')!==false )
+//       $loc = '/wp-admin/';
+//       if( $loc ){
+//       header( 'Location: '.get_option('site_url').$loc, true, 303 );
+//       exit;
+//       }
+// }
+
+
+
 // load config
 require_once(dirname(__FILE__).'/config.php');
