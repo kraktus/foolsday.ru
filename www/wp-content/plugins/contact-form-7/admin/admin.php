@@ -2,7 +2,8 @@
 
 require_once WPCF7_PLUGIN_DIR . '/admin/admin-functions.php';
 
-add_action( 'admin_menu', 'wpcf7_admin_menu', 9 );
+
+       add_action( 'admin_menu', 'wpcf7_admin_menu', 9 );
 
 function wpcf7_admin_menu() {
 	$icon_url = wpcf7_plugin_url( 'admin/images/menu-icon.png' );

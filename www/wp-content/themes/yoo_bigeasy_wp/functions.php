@@ -101,7 +101,7 @@ $current_user_role = get_current_user_role();
 function remove_menus(){
   global $menu;
   $restricted = array(
-    __('Dashboard'),
+    //__('Dashboard'),
     __('Posts'),
     __('Media'),
     __('Links'),
@@ -112,7 +112,7 @@ function remove_menus(){
     __('Settings'),
     __('Comments'),
     __('Plugins'),
-    __('Wpcf7_admin_menu')
+    __('Contact')
   );
   // echo "<pre>";
   // var_dump($menu);
@@ -140,6 +140,14 @@ function clear_dash(){
       unset($dash_normal['dashboard_recent_comments']); //Последние комментарии
       unset($dash_normal['dashboard_plugins']); //Последние Плагины
 }
+//Удаление меню "Добавить"
+function remove_admin_bar_links() {
+
+        global $wp_admin_bar;
+        $wp_admin_bar->remove_menu('new-content');
+        $wp_admin_bar->remove_menu('new-link');
+        $wp_admin_bar->remove_menu('comments');
+    }
 
 
 //Запрещаем пользователю доступ.
@@ -149,33 +157,18 @@ if ($current_user_role!='Administrator')
     add_action('wp_dashboard_setup', 'clear_dash' );
     //Пункты меню
     add_action('admin_menu', 'remove_menus');
-
+    //Меню "Добавить+"
+    add_action( 'wp_before_admin_bar_render', 'remove_admin_bar_links' );
     //Обновления
     if( !current_user_can( 'edit_users' ) ){
       add_action( 'init', create_function( '$a', "remove_action( 'init', 'wp_version_check' );" ), 2 );
       add_filter( 'pre_option_update_core', create_function( '$a', "return null;" ) );
       // для 3.0+
       add_filter( 'pre_site_transient_update_core', create_function( '$a', "return null;" ) );
-
-
-}
-
+  }
 }
 
 
-
-// /* редирект с login на /wp-login.php  и с admin на /wp-admin */
-// add_action('template_redirect', 'kama_login_redirect');
-// function kama_login_redirect(){
-//       if( strpos($_SERVER['REQUEST_URI'], 'login')!==false )
-//       $loc = '/wp-login.php';
-//       elseif( strpos($_SERVER['REQUEST_URI'], 'admin')!==false )
-//       $loc = '/wp-admin/';
-//       if( $loc ){
-//       header( 'Location: '.get_option('site_url').$loc, true, 303 );
-//       exit;
-//       }
-// }
 
 
 
