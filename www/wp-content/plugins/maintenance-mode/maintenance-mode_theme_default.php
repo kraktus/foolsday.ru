@@ -6,7 +6,7 @@
 	<meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
 	<meta name="description" content="<?php bloginfo('description'); ?>" />
 	<title><?php bloginfo('name'); ?> &raquo; <?php echo $this->g_opt['mamo_pagetitle']; ?></title>
-	
+
 	<style type="text/css">
 		<!--
 		* { margin: 0; 	padding: 0; }
@@ -23,7 +23,7 @@
 		#menu #admin { float: right; padding-right: .3em; }
 		-->
 	</style>
-	
+
 </head>
 
 <body>
@@ -31,18 +31,15 @@
 	<div id="header">
 		<h2><a title="<?php bloginfo('name'); ?>" href="<?php echo get_settings('home'); ?>"><?php bloginfo('name'); ?></a></h2>
 	</div>
-	
+
 	<div id="content">
-		<?php echo $this->mamo_template_tag_message(); ?>		
+		<?php echo $this->mamo_template_tag_message(); ?>
 	</div>
 
-	<div id="menu">
+<!-- 	<div id="menu">
 
-		<p id="admin"><?php	echo $this->mamo_template_tag_login_logout(); ?></p>
-
-		<p id="pluginauthor">Maintenance Mode plugin by <a title="Software Guide" href="http://sw-guide.de/">Software Guide</a>.</p>
-
-	</div>
-
+	<p id="admin"><?php	echo $this->mamo_template_tag_login_logout(); ?></p>
+</div>
+ -->
 </body>
 </html>

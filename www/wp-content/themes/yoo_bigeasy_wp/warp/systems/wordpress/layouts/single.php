@@ -188,59 +188,27 @@ $post_info = get_post_custom();
 <? endif;?>
 
 
-<!-- Фоторамки -->
-<!-- <div class="wk-gallery wk-gallery-wall clearfix polaroid ">
-	<a class="" href="/demo/themes/wordpress/2011/bigeasy/wp-content/uploads/yootheme/widgetkit/gallery/polaroid/image1.jpg" data-lightbox="group:506-5314969e78b60" title="Tony"><div><img src="/demo/themes/wordpress/2011/bigeasy/wp-content/plugins/widgetkit/cache/gallery/506/image1-28114964f3.jpg" width="200" height="150" alt="image1"><p class="title">Tony</p></div></a>
-	<a class="" href="/demo/themes/wordpress/2011/bigeasy/wp-content/uploads/yootheme/widgetkit/gallery/polaroid/image2.jpg" data-lightbox="group:506-5314969e78b60" title="Susan"><div><img src="/demo/themes/wordpress/2011/bigeasy/wp-content/plugins/widgetkit/cache/gallery/506/image2-0774cee8c3.jpg" width="200" height="150" alt="image2"><p class="title">Susan</p></div></a>
-	<a class="" href="/demo/themes/wordpress/2011/bigeasy/wp-content/uploads/yootheme/widgetkit/gallery/polaroid/image3.jpg" data-lightbox="group:506-5314969e78b60" title="Jennifer"><div><img src="/demo/themes/wordpress/2011/bigeasy/wp-content/plugins/widgetkit/cache/gallery/506/image3-b4c0ca1ce9.jpg" width="200" height="150" alt="image3"><p class="title">Jennifer</p></div></a>
-	<a class="" href="/demo/themes/wordpress/2011/bigeasy/wp-content/uploads/yootheme/widgetkit/gallery/polaroid/image4.jpg" data-lightbox="group:506-5314969e78b60" title="Kim"><div><img src="/demo/themes/wordpress/2011/bigeasy/wp-content/plugins/widgetkit/cache/gallery/506/image4-6abba3a89c.jpg" width="200" height="150" alt="image4"><p class="title">Kim</p></div></a>
-	<a class="" href="/demo/themes/wordpress/2011/bigeasy/wp-content/uploads/yootheme/widgetkit/gallery/polaroid/image5.jpg" data-lightbox="group:506-5314969e78b60" title="Vanessa"><div><img src="/demo/themes/wordpress/2011/bigeasy/wp-content/plugins/widgetkit/cache/gallery/506/image5-3449ac5be7.jpg" width="200" height="150" alt="image5"><p class="title">Vanessa</p></div></a>
-	<a class="" href="/demo/themes/wordpress/2011/bigeasy/wp-content/uploads/yootheme/widgetkit/gallery/polaroid/image6.jpg" data-lightbox="group:506-5314969e78b60" title="Clark"><div><img src="/demo/themes/wordpress/2011/bigeasy/wp-content/plugins/widgetkit/cache/gallery/506/image6-a1235e1190.jpg" width="200" height="150" alt="image6"><p class="title">Clark</p></div></a>
-	<a class="" href="/demo/themes/wordpress/2011/bigeasy/wp-content/uploads/yootheme/widgetkit/gallery/polaroid/image1.jpg" data-lightbox="group:506-5314969e78b60" title="Tony"><div><img src="/demo/themes/wordpress/2011/bigeasy/wp-content/plugins/widgetkit/cache/gallery/506/image1-28114964f3.jpg" width="200" height="150" alt="image1"><p class="title">Tony</p></div></a>
-	<a class="" href="/demo/themes/wordpress/2011/bigeasy/wp-content/uploads/yootheme/widgetkit/gallery/polaroid/image2.jpg" data-lightbox="group:506-5314969e78b60" title="Susan"><div><img src="/demo/themes/wordpress/2011/bigeasy/wp-content/plugins/widgetkit/cache/gallery/506/image2-0774cee8c3.jpg" width="200" height="150" alt="image2"><p class="title">Susan</p></div></a>
-	<a class="" href="/demo/themes/wordpress/2011/bigeasy/wp-content/uploads/yootheme/widgetkit/gallery/polaroid/image3.jpg" data-lightbox="group:506-5314969e78b60" title="Jennifer"><div><img src="/demo/themes/wordpress/2011/bigeasy/wp-content/plugins/widgetkit/cache/gallery/506/image3-b4c0ca1ce9.jpg" width="200" height="150" alt="image3"><p class="title">Jennifer</p></div></a>
-	<a class="" href="/demo/themes/wordpress/2011/bigeasy/wp-content/uploads/yootheme/widgetkit/gallery/polaroid/image4.jpg" data-lightbox="group:506-5314969e78b60" title="Kim"><div><img src="/demo/themes/wordpress/2011/bigeasy/wp-content/plugins/widgetkit/cache/gallery/506/image4-6abba3a89c.jpg" width="200" height="150" alt="image4"><p class="title">Kim</p></div></a>
-	<a class="" href="/demo/themes/wordpress/2011/bigeasy/wp-content/uploads/yootheme/widgetkit/gallery/polaroid/image5.jpg" data-lightbox="group:506-5314969e78b60" title="Vanessa"><div><img src="/demo/themes/wordpress/2011/bigeasy/wp-content/plugins/widgetkit/cache/gallery/506/image5-3449ac5be7.jpg" width="200" height="150" alt="image5"><p class="title">Vanessa</p></div></a>
-	<a class="" href="/demo/themes/wordpress/2011/bigeasy/wp-content/uploads/yootheme/widgetkit/gallery/polaroid/image6.jpg" data-lightbox="group:506-5314969e78b60" title="Clark"><div><img src="/demo/themes/wordpress/2011/bigeasy/wp-content/plugins/widgetkit/cache/gallery/506/image6-a1235e1190.jpg" width="200" height="150" alt="image6"><p class="title">Clark</p></div></a>
-
-</div> -->
-
 <!-- Если и фотки и видео -->
 <? if(($post_info["wpcf-isset_photo"][0] == 1) && ($post_info["wpcf-isset_video"][0] == 1)):?>
-	<div class="wk-gallery wk-gallery-wall clearfix zoom ">
+	<div style="margin:0 auto;" class="wk-gallery wk-gallery-wall clearfix zoom ">
 		<? for ($i = 0; $i < count($post_info["wpcf-photos"]); $i++): ?>
 			<a class="" href="<?=$post_info["wpcf-photos"][$i]?>" data-lightbox="group:504-5314969e7657e" title="">
 				<img src="<?=$post_info["wpcf-photos"][$i]?>" width="213" height="150" alt="image4">
 			</a>
 		<? endfor; ?>
 	</div>
+
 <? endif;?>
-
-<!-- Без границы -->
-<!-- <div class="wk-gallery wk-gallery-wall clearfix zoom ">
-	<a class="" href="/demo/themes/wordpress/2011/bigeasy/wp-content/uploads/yootheme/widgetkit/gallery/zoom/image1.jpg" data-lightbox="group:504-5314969e7657e" title="Model 1"><img src="/demo/themes/wordpress/2011/bigeasy/wp-content/plugins/widgetkit/cache/gallery/504/image1-d9b9c40429.jpg" width="200" height="150" alt="image1"></a>
-	<a class="" href="/demo/themes/wordpress/2011/bigeasy/wp-content/uploads/yootheme/widgetkit/gallery/zoom/image2.jpg" data-lightbox="group:504-5314969e7657e" title="Model 2"><img src="/demo/themes/wordpress/2011/bigeasy/wp-content/plugins/widgetkit/cache/gallery/504/image2-d3ca5d37ec.jpg" width="200" height="150" alt="image2"></a>
-	<a class="" href="/demo/themes/wordpress/2011/bigeasy/wp-content/uploads/yootheme/widgetkit/gallery/zoom/image3.jpg" data-lightbox="group:504-5314969e7657e" title="Model 3"><img src="/demo/themes/wordpress/2011/bigeasy/wp-content/plugins/widgetkit/cache/gallery/504/image3-1aee0e3ca2.jpg" width="200" height="150" alt="image3"></a>
-	<a class="" href="/demo/themes/wordpress/2011/bigeasy/wp-content/uploads/yootheme/widgetkit/gallery/zoom/image4.jpg" data-lightbox="group:504-5314969e7657e" title="Model 4"><img src="/demo/themes/wordpress/2011/bigeasy/wp-content/plugins/widgetkit/cache/gallery/504/image4-98d8eb069e.jpg" width="200" height="150" alt="image4"></a>
-	<a class="" href="/demo/themes/wordpress/2011/bigeasy/wp-content/uploads/yootheme/widgetkit/gallery/zoom/image5.jpg" data-lightbox="group:504-5314969e7657e" title="Model 5"><img src="/demo/themes/wordpress/2011/bigeasy/wp-content/plugins/widgetkit/cache/gallery/504/image5-6c496abd8c.jpg" width="200" height="150" alt="image5"></a>
-	<a class="" href="/demo/themes/wordpress/2011/bigeasy/wp-content/uploads/yootheme/widgetkit/gallery/zoom/image6.jpg" data-lightbox="group:504-5314969e7657e" title="Model 6"><img src="/demo/themes/wordpress/2011/bigeasy/wp-content/plugins/widgetkit/cache/gallery/504/image6-5c401ad41a.jpg" width="200" height="150" alt="image6"></a>
-	<a class="" href="/demo/themes/wordpress/2011/bigeasy/wp-content/uploads/yootheme/widgetkit/gallery/zoom/image1.jpg" data-lightbox="group:504-5314969e7657e" title="Model 1"><img src="/demo/themes/wordpress/2011/bigeasy/wp-content/plugins/widgetkit/cache/gallery/504/image1-d9b9c40429.jpg" width="200" height="150" alt="image1"></a>
-	<a class="" href="/demo/themes/wordpress/2011/bigeasy/wp-content/uploads/yootheme/widgetkit/gallery/zoom/image2.jpg" data-lightbox="group:504-5314969e7657e" title="Model 2"><img src="/demo/themes/wordpress/2011/bigeasy/wp-content/plugins/widgetkit/cache/gallery/504/image2-d3ca5d37ec.jpg" width="200" height="150" alt="image2"></a>
-	<a class="" href="/demo/themes/wordpress/2011/bigeasy/wp-content/uploads/yootheme/widgetkit/gallery/zoom/image3.jpg" data-lightbox="group:504-5314969e7657e" title="Model 3"><img src="/demo/themes/wordpress/2011/bigeasy/wp-content/plugins/widgetkit/cache/gallery/504/image3-1aee0e3ca2.jpg" width="200" height="150" alt="image3"></a>
-	<a class="" href="/demo/themes/wordpress/2011/bigeasy/wp-content/uploads/yootheme/widgetkit/gallery/zoom/image4.jpg" data-lightbox="group:504-5314969e7657e" title="Model 4"><img src="/demo/themes/wordpress/2011/bigeasy/wp-content/plugins/widgetkit/cache/gallery/504/image4-98d8eb069e.jpg" width="200" height="150" alt="image4"></a>
-	<a class="" href="/demo/themes/wordpress/2011/bigeasy/wp-content/uploads/yootheme/widgetkit/gallery/zoom/image5.jpg" data-lightbox="group:504-5314969e7657e" title="Model 5"><img src="/demo/themes/wordpress/2011/bigeasy/wp-content/plugins/widgetkit/cache/gallery/504/image5-6c496abd8c.jpg" width="200" height="150" alt="image5"></a>
-	<a class="" href="/demo/themes/wordpress/2011/bigeasy/wp-content/uploads/yootheme/widgetkit/gallery/zoom/image6.jpg" data-lightbox="group:504-5314969e7657e" title="Model 6"><img src="/demo/themes/wordpress/2011/bigeasy/wp-content/plugins/widgetkit/cache/gallery/504/image6-5c401ad41a.jpg" width="200" height="150" alt="image6"></a>
-</div> -->
-
-
-<!-- <a style="display: block;" data-lightbox  href="http://www.youtube.com/watch?v=O6RCrsATYw0" title="Изо Всех Сил">
- -->
 
 <!-- Видосы -->
 <? if($post_info["wpcf-isset_video"][0] == 1):?>
 	<? for ($i = 0; $i < count($post_info["wpcf-video"]); $i++): ?>
 		<br><br>
+		<hr>
+		<br><br>
+		<div style="margin:0 auto;">
 		<?=$post_info["wpcf-video"][$i]?>
+		</div>
 	<? endfor; ?>
 <? endif;?>
 

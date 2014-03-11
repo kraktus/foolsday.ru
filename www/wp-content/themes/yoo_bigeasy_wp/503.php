@@ -11,7 +11,7 @@
 */
 
 // get warp
-$warp = Warp::getInstance();
+// $warp = Warp::getInstance();
  get_header(); ?>
 
 <h1>Сообщение 404 - Страницы не существует</h1>

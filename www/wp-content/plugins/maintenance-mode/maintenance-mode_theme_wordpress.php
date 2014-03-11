@@ -6,7 +6,7 @@
 	<meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
 	<meta name="description" content="<?php bloginfo('description'); ?>" />
 	<title><?php bloginfo('name'); ?> &rsaquo; <?php echo $this->g_opt['mamo_pagetitle']; ?></title>
-	
+
 <?php
 	wp_admin_css( 'login', true );
 	wp_admin_css( 'colors-fresh', true );
@@ -40,24 +40,27 @@
 <body class="login">
 
 	<div id="login">
-	
-		<h1><a href="<?php echo apply_filters('login_headerurl', 'http://wordpress.org/'); ?>" title="<?php echo apply_filters('login_headertitle', __('Powered by WordPress')); ?>"><?php bloginfo('name'); ?></a></h1>
-	
+
+<!-- 		<h1><a href="<?php echo apply_filters('login_headerurl', 'http://wordpress.org/'); ?>" title="<?php echo apply_filters('login_headertitle', __('Powered by WordPress')); ?>"><?php bloginfo('name'); ?></a></h1>
+ -->
+ 		<a style="margin-left: 25px; outline: none;" href="/">
+			<img src="/wp-content/plugins/maintenance-mode/logo_black.png" width="249" height="82" alt="logo">
+		</a>
 		<form name="loginform" id="loginform" action="<?php echo site_url('wp-login.php', 'login_post') ?>" method="post">
 			<?php echo $this->mamo_template_tag_message(); ?>
 		</form>
- 
-		<p id="nav">
+
+<!-- 		<p id="nav">
 			<?php echo $this->mamo_template_tag_login_logout(); ?>
 		</p>
-
+ -->
 	</div>
 
-	<p id="menu">
+<!-- 	<p id="menu">
 		Maintenance Mode plugin by <a title="Software Guide" href="http://sw-guide.de/">Software Guide</a>.
 	</p>
-
-	<p id="backtoblog"><a href="<?php bloginfo('url'); ?>/" title="<?php _e('Home Page') ?>"><?php printf('%s', get_bloginfo('title', 'display' )); ?></a></p>
+ -->
+	<!-- <p id="backtoblog"><a href="<?php bloginfo('url'); ?>/" title="<?php _e('Home Page') ?>"><?php printf('%s', get_bloginfo('title', 'display' )); ?></a></p> -->
 
 </body>
 </html>

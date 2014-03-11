@@ -65,6 +65,7 @@ else
 <tr>
 <th colspan="3">
 <p style="text-align: left;"><em><?=$post_info["wpcf-title_text"][0];?>
+<br>
  <a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>">Подробнее...</a></em></p>
 </th>
 </tr>
@@ -128,16 +129,17 @@ else
 <tr>
 <td align="right" width="200">
         <?php if ($post_info["wpcf-isset_photo"][0] == 1): ?>
-                <img class="alignnone  wp-image-775" alt="photo" src="http://foolsday.local/wp-content/uploads/2014/03/photo.png" width="60" height="60" />
+                <img class="alignnone  wp-image-775" alt="photo" src="/wp-content/uploads/2014/03/photo.png" width="60" height="60" />
         <?php endif ?>
 
         <?php if ($post_info["wpcf-isset_video"][0] == 1): ?>
-                <img class="alignnone  wp-image-776" alt="video" src="http://foolsday.local/wp-content/uploads/2014/03/video.png" width="60" height="60" />
+                <img class="alignnone  wp-image-776" alt="video" src="/wp-content/uploads/2014/03/video.png" width="60" height="60" />
         <?php endif ?>
 </td>
 </tr>
 <tr>
 <td colspan="2"><em><?=$post_info["wpcf-title_text"][0]?>
+<br>
  <a href="" title="">Подробнее...</a>
 </em></td>
 </tr>
