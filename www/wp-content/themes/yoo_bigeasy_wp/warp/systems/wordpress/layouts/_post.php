@@ -64,8 +64,7 @@ else
 </tr>
 <tr>
 <th colspan="3">
-<p style="text-align: left;"><em><?=$post_info["wpcf-title_text"][0];?>
-<br>
+<p style="text-align: left;"><em><?=$post_info["wpcf-title_text"][0];?><br><br>
  <a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>">Подробнее...</a></em></p>
 </th>
 </tr>
@@ -139,8 +138,7 @@ else
 </tr>
 <tr>
 <td colspan="2"><em><?=$post_info["wpcf-title_text"][0]?>
-<br>
- <a href="" title="">Подробнее...</a>
+ <br><br><a href="" title="">Подробнее...</a>
 </em></td>
 </tr>
 </tbody>
