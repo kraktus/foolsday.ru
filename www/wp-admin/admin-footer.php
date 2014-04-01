@@ -32,7 +32,7 @@ if ( !defined('ABSPATH') )
 		 * @since 2.8.0
 		 * @param string The content that will be printed.
 		 */
-		echo apply_filters( 'admin_footer_text', '<span id="footer-thankyou">' . __( 'Thank you for creating with <a href="http://wordpress.org/">WordPress</a>.' ) . '</span>' );
+		// echo apply_filters( 'admin_footer_text', '<span id="footer-thankyou">' . __( 'Thank you for creating with <a href="http://wordpress.org/">WordPress</a>.' ) . '</span>' );
 		?>
 	</p>
 	<p id="footer-upgrade" class="alignright">
@@ -46,7 +46,7 @@ if ( !defined('ABSPATH') )
 		 * @since 2.3.0
 		 * @param string The content that will be printed.
 		 */
-		echo apply_filters( 'update_footer', '' );
+		// echo apply_filters( 'update_footer', '' );
 		?>
 	</p>
 	<div class="clear"></div>

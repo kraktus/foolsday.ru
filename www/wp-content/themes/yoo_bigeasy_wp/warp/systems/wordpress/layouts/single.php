@@ -77,14 +77,14 @@ else
 
 			<?if($post_info["wpcf-vk"][0])://ВК-встреча если есть?>
 			<dd>
-				<a href="<?=$post_info["wpcf-vk"][0];?>" title="<?php /*the_title_attribute(); */?>">Встреча вконтакте</a>
+				<a href="<?=$post_info["wpcf-vk"][0];?>" target="_blank" title="<?php /*the_title_attribute(); */?>">Встреча вконтакте</a>
 			</dd>
 			<?endif;?>
 
 
 			<?if($post_info["wpcf-media"][0] == 2)://Фотоотчет если есть?>
 			<dd>
-				<a href="<?=$post_info["wpcf-url_media"][0];?>" title="<?php /*the_title_attribute(); */?>">Фото/Видео с концерта</a>
+				<a href="<?=$post_info["wpcf-url_media"][0];?>" target="_blank" title="<?php /*the_title_attribute(); */?>">Фото/Видео с концерта</a>
 			</dd>
 			<?endif;?>
 

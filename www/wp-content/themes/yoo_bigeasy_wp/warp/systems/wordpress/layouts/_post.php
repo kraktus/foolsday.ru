@@ -58,7 +58,7 @@ else
 <h3 style="text-align: right;">г. <?=$post_info["wpcf-city"][0];?></h3>
 <h3 style="text-align: right;">Клуб <strong><?=$post_info["wpcf-club"][0];?></strong></h3>
 <?if($post_info["wpcf-vk"][0]):?>
-        <h3 style="text-align: right;"><a href="<?=$post_info["wpcf-vk"][0];?>" title="<?php the_title_attribute(); ?>">Встреча вконтакте</a></h3>
+        <h3 style="text-align: right;"><a href="<?=$post_info["wpcf-vk"][0];?>" target="_blank"  title="<?php the_title_attribute(); ?>">Встреча вконтакте</a></h3>
 <?endif;?>
 </th>
 </tr>
