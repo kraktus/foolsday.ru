@@ -1,0 +1,9 @@
+/* Copyright (C) YOOtheme GmbH, YOOtheme Proprietary Use License (http://www.yootheme.com/license) */
+
+.menu-dropdown a.level1,
+.menu-dropdown span.level1,
+.menu-dropdown a.level2,
+.menu-dropdown span.level2,
+.menu-sidebar li.level1 > a,
+.menu-sidebar li.level1 > span { font-family: "Trebuchet MS", Verdana, Arial, sans-serif; }
+

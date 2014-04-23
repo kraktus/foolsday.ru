@@ -1,0 +1,2 @@
+ls -al
+git status

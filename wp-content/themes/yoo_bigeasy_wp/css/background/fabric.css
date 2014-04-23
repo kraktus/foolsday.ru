@@ -1,0 +1,6 @@
+/* Copyright (C) YOOtheme GmbH, YOOtheme Proprietary Use License (http://www.yootheme.com/license) */
+
+
+body#page { background: #2A2B2B url(../../images/background/fabric_bg.jpg) repeat fixed; }
+
+#page-body { background: url(../../images/background/fabric_img.jpg) 50% 0 no-repeat fixed; }

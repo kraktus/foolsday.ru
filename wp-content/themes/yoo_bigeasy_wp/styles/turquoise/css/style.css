@@ -1,0 +1,93 @@
+/* Copyright (C) YOOtheme GmbH, YOOtheme Proprietary Use License (http://www.yootheme.com/license) */
+
+/* Base
+----------------------------------------------------------------------------------------------------*/
+
+a { color: #3F9E9C; }
+
+::-moz-selection { background: #235655; color: #98D6D5; }
+::selection { background: #235655; color: #98D6D5; }
+
+
+/* Layout
+----------------------------------------------------------------------------------------------------*/
+
+#totop-scroller { background-image: url(../images/totop_scroller.png); }
+
+/* Menus
+----------------------------------------------------------------------------------------------------*/
+
+.menu-dropdown li.level1:hover .level1,
+.menu-dropdown li.remain .level1,
+.menu-dropdown a.level2:hover,
+.menu-dropdown a.level3:hover,
+.menu-sidebar .level2 a:hover > span,
+.menu-line li a:hover { color: #3F9E9C; }
+
+.menu-sidebar li.level1 > a:hover,
+.menu-sidebar li.level1 > span:hover { background: #3F9E9C; }
+
+
+/* Modules
+----------------------------------------------------------------------------------------------------*/
+
+.module .badge { background-image: url(../images/module_badges.png); }
+
+.mod-black a:hover,
+.mod-transparent { color: #3F9E9C; }
+
+.mod-color { background: #3F9E9C; }
+
+.mod-color .badge { background-image: url(../images/module_badges_black.png); }
+
+.mod-color ul.zebra > li.odd,
+.mod-color table.zebra tbody tr.odd { background: #3C9694; }
+.mod-color ul.zebra > li:nth-of-type(odd),
+.mod-color table.zebra tbody tr:nth-of-type(odd) { background: #3C9694; }
+.mod-color em.box {	background: #3C9694; }
+
+/* Tools
+----------------------------------------------------------------------------------------------------*/
+
+a.button-more { background-image: url(../images/button_more.png); }
+ul.check > li { background-image: url(../images/tools/list_check.png); }
+
+.social-icons li a { background-image: url(../images/tools/icons_social.png); }
+
+.symbol-icons { background-image: url(../images/tools/icons_symbols.png); }
+
+/* System
+----------------------------------------------------------------------------------------------------*/
+
+#system .items .links > a { background-image: url(../images/button_more.png); }
+
+#system .pagination a,
+#system .pagination strong,
+#system .pagination a.previous,
+#system .pagination a.next { background-image: url(../images/pagination.png); }
+
+#system .pagination a:hover,
+#system .pagination strong { color: #3F9E9C; }
+
+#searchbox .results li.results-header { background: #3F9E9C; }
+
+#searchbox .results li.result.selected { color: #3F9E9C; }
+
+#system #comments .comment-byadmin .comment-head { background: #D5E8E7; }
+
+
+/* Extensions
+----------------------------------------------------------------------------------------------------*/
+
+.wk-gallery-showcase .slides-container:hover .next,
+.wk-gallery-showcase .slides-container:hover .prev { background-image: url(../images/widgetkit/gallery/buttons.png); }
+
+.wk-gallery-showcase .wk-slideset .set > li:hover:after { background: url(../images/widgetkit/gallery/hover.png); }
+.wk-gallery-showcase .wk-slideset .set > li.active:after { border: 5px solid #3F9E9C; }
+
+.wk-gallery-showcase .wk-slideset > div .next,
+.wk-gallery-showcase .wk-slideset > div .prev {	background-image: url(../images/widgetkit/gallery/navigation_buttons.png); }
+
+.spotlight .overlay { background: url(../images/widgetkit/spotlight/hover.png); }
+
+.spotlight .overlay-default	{ background-color: rgba(63,158,156,0.5); }

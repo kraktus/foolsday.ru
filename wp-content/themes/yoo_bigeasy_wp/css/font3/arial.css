@@ -1,0 +1,14 @@
+/* Copyright (C) YOOtheme GmbH, YOOtheme Proprietary Use License (http://www.yootheme.com/license) */
+
+.menu-dropdown a.level1,
+.menu-dropdown span.level1,
+.menu-dropdown a.level2,
+.menu-dropdown span.level2,
+.menu-sidebar li.level1 > a,
+.menu-sidebar li.level1 > span { 
+	font-family: Arial, Helvetica, sans-serif;
+	letter-spacing: -1px;
+}
+
+.menu-dropdown .level1 .level1 span.subtitle,
+.menu-dropdown .level2 .level2 span.subtitle { letter-spacing: 0px; }

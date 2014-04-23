@@ -1,0 +1,28 @@
+/* Copyright (C) YOOtheme GmbH, YOOtheme Proprietary Use License (http://www.yootheme.com/license) */
+
+@import url(../warp/css/mobile.css);
+
+body { 
+	background: #2A2B2B;
+}
+
+#m-top .module,
+.noblog #m-content,
+#page.isblog #system .item,
+#m-bottom .module {
+	-webkit-border-radius: 0;
+	border-radius: 0;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+#m-footer { 
+	padding: 9px;
+	color: #ccc;
+	background: #1A1A1C;
+}
+
+#system > .description {
+	margin: 20px;
+	color: #fff;
+}
