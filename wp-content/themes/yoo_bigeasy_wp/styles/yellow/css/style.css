@@ -1,0 +1,100 @@
+/* Copyright (C) YOOtheme GmbH, YOOtheme Proprietary Use License (http://www.yootheme.com/license) */
+
+/* Base
+----------------------------------------------------------------------------------------------------*/
+
+a { color: #aaa; }
+
+::-moz-selection { background: #000; color: #FEF158; }
+::selection { background: #000; color: #FEF7A0; }
+
+
+/* Layout
+----------------------------------------------------------------------------------------------------*/
+
+#totop-scroller { background-image: url(../images/totop_scroller.png); }
+
+/* Menus
+----------------------------------------------------------------------------------------------------*/
+
+.menu-dropdown li.level1:hover .level1,
+.menu-dropdown li.remain .level1,
+.menu-dropdown a.level2:hover,
+.menu-dropdown a.level3:hover,
+.menu-sidebar .level2 a:hover > span,
+.menu-line li a:hover { color: #FEF158; }
+
+.menu-sidebar li.level1 > a:hover,
+.menu-sidebar li.level1 > span:hover { background: #FEF158; }
+
+
+/* Modules
+----------------------------------------------------------------------------------------------------*/
+
+.mod-black a:hover,
+.mod-transparent { color: #FEF158; }
+
+.mod-color { background: #FEF158; }
+
+.module .badge { background-image: url(../images/module_badges_black.png); }
+
+.mod-color a,
+.mod-color .menu-sidebar .level2 a > span { text-shadow: 0 1px 1px rgba(0,0,0,0.2); }
+.mod-color a:hover,
+.mod-color .menu-sidebar .level2 a:hover > span,
+.mod-color ul.line > li a:hover { 
+	color: #000;
+	text-shadow: 0 1px 0 rgba(255,255,255,0.3);
+}
+
+.mod-color ul.zebra > li.odd,
+.mod-color table.zebra tbody tr.odd { background: #F1E554; }
+.mod-color ul.zebra > li:nth-of-type(odd),
+.mod-color table.zebra tbody tr:nth-of-type(odd) { background: #F1E554; }
+.mod-color em.box {	background: #F1E554; }
+
+/* Tools
+----------------------------------------------------------------------------------------------------*/
+
+a.button-more { background-image: url(../images/button_more.png); }
+ul.check > li { background-image: url(../images/tools/list_check.png); }
+
+.social-icons li a { background-image: url(../images/tools/icons_social.png); }
+
+.symbol-icons { background-image: url(../images/tools/icons_symbols.png); }
+
+/* System
+----------------------------------------------------------------------------------------------------*/
+
+#system .items .links > a { background-image: url(../images/button_more.png); }
+
+#system .pagination a,
+#system .pagination strong,
+#system .pagination a.previous,
+#system .pagination a.next { background-image: url(../images/pagination.png); }
+
+#system .pagination a:hover,
+#system .pagination strong { color: #aaa; }
+
+#searchbox .results li.results-header { background: #FEF158; }
+
+#searchbox .results li.result.selected { color: #FEF158; }
+
+#system #comments .comment-byadmin .comment-head { background: #FBF7C9; }
+
+
+/* Extensions
+----------------------------------------------------------------------------------------------------*/
+
+.wk-gallery-showcase .slides-container:hover .next,
+.wk-gallery-showcase .slides-container:hover .prev { background-image: url(../images/widgetkit/gallery/buttons.png); }
+
+.wk-gallery-showcase .wk-slideset .set > li:hover:after { background: url(../images/widgetkit/gallery/hover.png); }
+.wk-gallery-showcase .wk-slideset .set > li.active:after { border: 5px solid #FEF158; }
+
+.wk-gallery-showcase .wk-slideset > div .next,
+.wk-gallery-showcase .wk-slideset > div .prev {	background-image: url(../images/widgetkit/gallery/navigation_buttons.png); }
+
+.spotlight .overlay { background: url(../images/widgetkit/spotlight/hover.png); }
+
+.spotlight .overlay-default	{ background-color: rgba(254,241,88,0.5); }

@@ -1,0 +1,10 @@
+/* Copyright (C) YOOtheme GmbH, YOOtheme Proprietary Use License (http://www.yootheme.com/license) */
+
+@import url(../../../css/rtl.css);
+
+/* Tools
+----------------------------------------------------------------------------------------------------*/
+
+/* Buttons */
+a.button-more,
+#system .items .links > a { background-image: url(../images/rtl/button_more.png); }
