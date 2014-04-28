@@ -138,7 +138,7 @@ else
 </tr>
 <tr>
 <td colspan="2"><em><?=$post_info["wpcf-title_text"][0]?>
- <br><br><a href="" title="">Подробнее...</a>
+ <br><br><a href="<?php the_permalink() ?>" title="">Подробнее...</a>
 </em></td>
 </tr>
 </tbody>
